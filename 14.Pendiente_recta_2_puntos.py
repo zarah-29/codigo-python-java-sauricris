@@ -1,0 +1,6 @@
+x1 = float(input("Ingrese X1: "))
+y1 = float(input("Ingrese Y1: "))
+x2 = float(input("Ingrese X2: "))
+y2 = float(input("Ingrese Y2: "))
+m = (y2 - y1) / (x2 - x1)
+print("La pendiente es:", m)

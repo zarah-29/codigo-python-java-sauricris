@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>pagina de codigos</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      vertical-align: top;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      margin: 0;
+      overflow-x: auto;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+  <!-- Botón para alternar la visibilidad de todos los códigos -->
+  <button id="toggleButton" onclick="toggleAllCodes()">Mostrar todos los códigos</button>
+
+  <!-- Tabla que contendrá la lista de códigos -->
+  <table id="codeTable">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Código Python</th>
+        <th>Código JavaScript</th>
+      </tr>
+    </thead>
+    <tbody>
+   
+
+  <script>
+    // Suponiendo que 'codes' es un arreglo de 60 (o más) objetos, cada uno con 'title', 'py' y 'js'.
+    var codes = [
+      // Ejemplos de objetos; reemplaza estos datos con tus 60 códigos reales.
+      { title: "1. Leer número dividido en dos", py: `N = float(input('Ingrese un número: '))\nresultado = N / 2\nprint('El resultado de la división es:', resultado)`, js: `let N = parseFloat(prompt('Ingrese un número:'));\nlet resultado = N / 2;\nconsole.log('El resultado de la división es:', resultado);` },
+            
+            { title: "2. Cubo de un número", py: `numero = int(input("Ingrese un número: "))\nresultado = numero * numero * numero\nprint("El resultado del cubo de ese número es:", resultado)`, js: `let numero = parseInt(prompt("Ingrese un número:"));\nlet resultado = numero * numero * numero;\nconsole.log("El cubo de ese número es:", resultado);` },
+            
+            { title: "3. Área de un cuadrado", py: `lado = float(input("Ingrese el lado del cuadrado: "))\narea = lado * lado\nprint("El área del cuadrado es:", area)`, js: `let lado = parseFloat(prompt("Ingrese un lado del cuadrado:"));\nlet area = lado * lado;\nconsole.log("El área del cuadrado es:", area);` },
+
+            { title: "4. Área de un triángulo", py: `base = float(input("Ingrese la base del triángulo: "))\naltura = float(input("Ingrese la altura del triángulo: "))\narea = (base * altura) / 2\nprint("El área del triángulo es:", area)`, js: `let base = parseFloat(prompt("Ingrese la base del triángulo:"));\nlet altura = parseFloat(prompt("Ingrese la altura del triángulo:"));\nlet area = (base * altura) / 2;\nconsole.log("El área del triángulo es:", area);` },
+
+            { title: "5. Área de un rectángulo", py: `base = float(input("Ingrese la base del rectángulo: "))\naltura = float(input("Ingrese la altura del rectángulo: "))\narea = base * altura\nprint("El área del rectángulo es:", area)`, js: `let base = parseFloat(prompt("Ingrese la base del rectángulo:"));\nlet altura = parseFloat(prompt("Ingrese la altura del rectángulo:"));\nlet area = base * altura;\nconsole.log("El área del rectángulo es:", area);` },
+
+            { title: "6. Área de un círculo", py: `radio = float(input("Ingrese el radio del círculo: "))\narea = 3.1416 * radio * radio \nprint("El área del círculo es:", area)`, js: `let radio = parseFloat(prompt("Ingrese el radio del círculo:"));\nlet area = 3.1416 * radio * radio;\nconsole.log("El área del círculo es:", area);` },
+
+            { title: "7. Área de un trapecio", py: `basemayor = float(input("Ingrese base mayor: "))\nbasemenor = float(input("Ingrese base menor: "))\naltura = float(input("Ingrese altura: "))\narea = (basemayor + basemenor) * altura / 2\nprint("El área del trapecio es:", area)`, js: `let basemayor = parseFloat(prompt("Ingrese base mayor:"));\nlet basemenor = parseFloat(prompt("Ingrese base menor:"));\nlet altura = parseFloat(prompt("Ingrese altura:"));\nlet area = (basemayor + basemenor) * altura / 2;\nconsole.log("El área del trapecio es:", area);` },
+
+            { title: "8. Volumen de un cilindro", py: `radio = float(input("Ingrese el radio del cilindro: "))\naltura = float(input("Ingrese la altura: "))\narea = 3.1416 * (radio * radio * altura)\nprint("El área del cilindro es:", area)`, js: `let radio = parseFloat(prompt("Ingrese el radio del cilindro:"));\nlet altura = parseFloat(prompt("Ingrese la altura:"));\nlet area = 3.1416 * (radio * radio * altura);\nconsole.log("El área del cilindro es:", area);` },
+
+            { title: "9. Calcular IVA de un producto", py: `Precio = float(input("Ingrese precio: "))\nPrecioTotal = Precio + ((Precio * 16 )/100)\nprint("El precio Total es :", PrecioTotal)`, js: `let precio = parseFloat(prompt("Ingrese precio:"));\nlet precioTotal = precio + ((precio * 16) / 100);\nconsole.log("El precio Total es :", precioTotal);` },
+
+            { title: "10. Celsius a Fahrenheit", py: `Celsius = float(input("Ingrese la temperatura en Celsius: "))\nFahrenheit = (Celsius * 9/5) + 32\nprint("Temperatura en Fahrenheit :", Fahrenheit)`, js: `let celsius = parseFloat(prompt("Ingrese la temperatura en Celsius:"));\nlet fahrenheit = (celsius * 9/5) + 32;\nconsole.log("Temperatura en Fahrenheit :", fahrenheit);` },
+
+            { title: "11. Fahrenheit a Celsius", py: `Fahrenheit = float(input("Ingrese la temperatura en Fahrenheit: "))\nCelsius = (Fahrenheit * 5/9) - 32\nprint("Temperatura en Celsius :", Celsius)`, js: `let fahrenheit = parseFloat(prompt("Ingrese la temperatura en Fahrenheit:"));\nlet celsius = (fahrenheit * 5/9) - 32;\nconsole.log("Temperatura en Celsius :", celsius);` },
+
+            { title: "12. Libras a Kilos", py: `libras = float(input("Ingrese las libras: "))\nKilos = libras * 0.454 \nprint("Cantidad en kilos es:", Kilos)`, js: `let libras = parseFloat(prompt("Ingrese las libras:"));\nlet kilos = libras * 0.454;\nconsole.log("Cantidad en kilos es:", kilos);` },
+
+            { title: "13. Kilos a gramos y toneladas", py: `Kilos = float(input("Ingrese el peso en kilos: "))\nGramos = Kilos * 1000  \nToneladas = Kilos / 1000\nprint("Gramos:", Gramos)\nprint("Toneladas:", Toneladas)`, js: `let kilos = parseFloat(prompt("Ingrese el peso en kilos:"));\nlet gramos = kilos * 1000;\nlet toneladas = kilos / 1000;\nconsole.log("Gramos:", gramos);\nconsole.log("Toneladas:", toneladas);` },
+        
+            { title: "14. Calcular la pendiente de un recta", py: `x1 = float(input("Ingrese X1: "))\ny1 = float(input("Ingrese Y1: "))\nx2 = float(input("Ingrese X2: "))\ny2 = float(input("Ingrese Y2: "))\nm = (y2 - y1) / (x2 - x1)\nprint("La pendiente es:", m)`, js: `let x1 = parseFloat(prompt("Ingrese X1:"));\nlet y1 = parseFloat(prompt("Ingrese Y1:"));\nlet x2 = parseFloat(prompt("Ingrese X2:"));\nlet y2 = parseFloat(prompt("Ingrese Y2:"));\nlet pendiente = (y2 - y1) / (x2 - x1);\nconsole.log("La pendiente es:", pendiente);` },
+
+            { title: "15. Numero mayor o menor a 0", py: `N = float(input("Ingrese un número: "))\nif N > 0:\n    print("El valor es positivo")\nelse:\n    print("El valor es negativo")`, js: `let N = parsefloat(prompt("Ingrese un número:"));\nif (N > 0) {\n    console.log("El valor es positivo");\n} else {\n    console.log("El valor es negativo");\n}` },
+
+            { title: "16. Número divisible entre 2", py: `N = int(input("Ingrese un número: "))\nif N % 2 == 0:\n    print("Valor divisible")\nelse:\n    print("No es divisible")`, js: `let N = parseInt(prompt("Ingrese un número:"));\n\nif (N % 2 === 0) {\n    console.log("Valor divisible");\n} else {\n    console.log("No es divisible");\n}` },
+
+            { title: "17. Número divisible entre 3", py: `if 9 % 3 == 0:\n    print("Es divisible entre 3")\nelse:\n    print("No es divisible entre 3")\n\nif 15 % 3 == 0:\n    print("Es divisible entre 3")\nelse:\n    print("No es divisible entre 3")\n\nif 13 % 3 == 0:\n    print("Es divisible entre 3")\nelse:\n    print("No es divisible entre 3")\n\nif 19 % 3 == 0:\n    print("Es divisible entre 3")\nelse:\n    print("No es divisible entre 3")\n\nif 27 % 3 == 0:\n    print("Es divisible entre 3")\nelse:\n    print("No es divisible entre 3")\n\nif 34 % 3 == 0:\n    print("Es divisible entre 3")\nelse:\n    print("No es divisible entre 3")\n\nif 39 % 3 == 0:\n    print("Es divisible entre 3")\nelse:\n    print("No es divisible entre 3")`, 
+
+             js: `if (9 % 3 === 0) {\n    console.log("Es divisible entre 3");\n} else {\n    console.log("No es divisible entre 3"");\n}\n\nif (15 % 3 === 0) {\n    console.log("Es divisible entre 3"");\n} else {\n    console.log("No es divisible entre 3"");\n}\n\nif (13 % 3 === 0) {\n    console.log("Es divisible entre 3");\n} else {\n    console.log("No es divisible entre 3");\n}\n\nif (19 % 3 === 0) {\n    console.log("Es divisible entre 3");\n} else {\n    console.log("No es divisible entre 3");\n}\n\nif (27 % 3 === 0) {\n    console.log("Es divisible entre 3");\n} else {\n    console.log("No es divisible entre 3");\n}\n\nif (34 % 3 === 0) {\n    console.log("Es divisible entre 3");\n} else {\n    console.log("No es divisible entre 3");\n}\n\nif (39 % 3 === 0) {\n    console.log("Es divisible entre 3");\n} else {\n    console.log("No es divisible entre 3");\n}`},
+
+             { title: "18. Intervalo del 5 al 10", py: `numero = float(input("Ingrese un numero: "))\n\nif (numero > 5) and (numero > 10):\n    print("El número está en el intervalo")\nelse:\n    print("El número no está en el intervalo")`, js: `let numero = parseFloat(prompt("Ingrese un número:"));\n\nif (numero > 5 && numero > 10) {\n    console.log("El número está en el intervalo");\n} else {\n    console.log("El número no está en el intervalo");\n}` },
+
+             { title: "19. Alumno reprobado o aprobado", py: `numero = float(input("Ingrese un numero: "))\n\nif numero > 7:\n    print("El alumno está aprobado")\nelse:\n    print("El alumno está reprobado")`, js: `let numero = parseFloat(prompt("Ingrese un número:"));\n\nif (numero > 7) {\n    console.log("El alumno está aprobado");\n} else {\n    console.log("El alumno está reprobado");\n}` },
+
+             { title: "20. Calificación: Regular, Bueno, Muy bueno, Excelente", py: `calif = float(input("Ingrese la calificación del alumno: "))\n\nif 6 <= calif <= 6.9:\n    print("Regular")\nelif 7 <= calif <= 7.9:\n    print("Bueno")\nelif 8 <= calif <= 8.9:\n    print("Muy bueno")\nelif 9 <= calif <= 10:\n    print("Excelente")`, 
+
+            js: `let calif = parseFloat(prompt("Ingrese la calificación del alumno:"));\n\nif (calif >= 6 && calif <= 6.9) {\n    console.log("Regular");\n} else if (calif >= 7 && calif <= 7.9) {\n    console.log("Bueno");\n} else if (calif >= 8 && calif <= 8.9) {\n    console.log("Muy bueno");\n} else if (calif >= 9 && calif <= 10) {\n    console.log("Excelente");\n}` },
+             
+            { title: "21. Tabla de multiplicar del 2", py: `x = 2\nfor i in range(1, 11):\n    result = x * i\n    print(f"{x} x {i} = {result}")`, 
+            js: `let x = 2;\nfor (let i = 1; i <= 10; i++) {\n    let result = x * i;\n    console.log(\`\${x} x \${i} = \${result}\`);\n}` },
+
+            { title: "22. Tabla de multiplicar del 5", py: `x = 5\nfor i in range(1, 11):\n    result = x * i\n    print(f"{x} x {i} = {result}")`, 
+            js: `let x = 5;\nfor (let i = 1; i <= 10; i++) {\n    let result = x * i;\n    console.log(\`\${x} x \${i} = \${result}\`);\n}` },
+
+            { title: "23. El cuadrado de 10 números", py: `for i in range(1, 11):\n    result = i * i\n    print(f"{i} x {i} = {result}")`, 
+            js: `for (let i = 1; i <= 10; i++) {\n    let result = i * i;\n    console.log(\`\${i} x \${i} = \${result}\`);\n}` },
+
+            { title: "24. Números pares del 0 al 20", py: `for i in range(0, 21, 2):\n    print("Número par:", i)`, js: `for (let i = 0; i <= 20; i += 2) {\n    console.log("Número par:", i);\n}` },
+
+            { title: "25. Números impares del 1 al 15", py: `for i in range(1, 16):\n    if i % 2 == 1:\n        print(f"{i}")`, js: `for (let i = 1; i <= 15; i++) {\n    if (i % 2 === 1) {\n        console.log(i);\n    }\n}` },
+
+            { title: "26. Vocales de SANTIAGO", py: `Palabra = "santiago"\nvocales = "aeiouAEIOU"\n\nfor letra in Palabra:\n    if letra in vocales:\n        print(letra)`, 
+            js: `let palabra = "santiago";\nlet vocales = "aeiouAEIOU";\n\nfor (let letra of palabra) {\n    if (vocales.includes(letra)) {\n        console.log(letra);\n    }\n}` },
+
+            { title: "27. Sumatoria entre 5,000 y 100,000", py: `c = 0\nfor i in range(5000, 100000):\n    c = c + i\n    print(f"{c} + {i} = {c}")`, js: `let c = 0;\nfor (let i = 5000; i < 100000; i++) {\n    c = c + i;\n    console.log(\`\${c} + \${i} = \${c}\`);\n}` },
+
+            { title: "28. Números pares entre 5 y 15", py: `contador = 0\nfor i in range(5, 16):\n    if i % 2 == 0:\n        contador = contador + 1\nprint(f"Hay: {contador} números pares")`, js: `let contador = 0;\nfor (let i = 5; i <= 15; i++) {\n    if (i % 2 === 0) {\n        contador++;\n    }\n}\nconsole.log(\`Hay: \${contador} números pares\`);` },
+
+            { title: "29. Mayor y menor de 20 números", py: `N = float(input("Ingrese un número: "))\n\nif N <= 1:\n    print("El número debe ser mayor que 1")\nelse:\n    mayor_menor = N\n    for i in range(20):\n        num = float(input("Ingrese un número: "))\n        if num <= N and (num > mayor_menor):\n            mayor_menor = num\n    print("El número mayor menor o igual es:", mayor_menor)`, 
+            js: `let N = parseFloat(prompt("Ingrese un número:"));\n\nif (N <= 1) {\n    console.log("El número debe ser mayor que 1");\n} else {\n    let mayorMenor = N;\n    for (let i = 0; i < 20; i++) {\n        let num = parseFloat(prompt("Ingrese un número:"));\n        if (num <= N && num > mayorMenor) {\n            mayorMenor = num;\n        }\n    }\n    console.log("El número mayor menor o igual es:", mayorMenor);\n}` },
+
+            { title: "30. Promedio de 38 alumnos", py: `contador = 0\nS = 0\nwhile contador <= 39:\n    c = float(input("Ingrese la calificación: "))\n    S = S + c\n    contador = contador + 1\n\npromedio = S / 38\nprint("Promedio:", promedio)`, js: `let contador = 0;\nlet S = 0;\nwhile (contador <= 39) {\n    let c = parseFloat(prompt("Ingrese la calificación:"));\n    S += c;\n    contador++;\n}\nlet promedio = S / 38;\nconsole.log("Promedio:", promedio);` },
+
+            { title: "31. Verificar si el número es primo o no", py: `n = int(input("Ingrese un número: "))\n\nif n <= 1:\n    print("NO es primo")\nelse:\n    es_primo = True\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            print("NO es primo")\n            es_primo = False\n            break\n    if es_primo:\n        print("ES primo")`, 
+            js: `let n = parseInt(prompt("Ingrese un número:"));\n\nif (n <= 1) {\n    console.log("NO es primo");\n} else {\n    let esPrimo = true;\n    for (let i = 2; i <= Math.sqrt(n); i++) {\n        if (n % i === 0) {\n            console.log("NO es primo");\n            esPrimo = false;\n            break;\n        }\n    }\n    if (esPrimo) {\n        console.log("ES primo");\n    }\n}` },
+
+            { title: "32. 10 caracteres en un vector de 5 posiciones", py: `def leer_caracteres():\n    s = int(input("Ingrese el tamaño del vector: "))\n    vector = []\n    for i in range(s):\n        caracter = input(f"Introduce el caracter {i + 1}: ")\n        vector.append(caracter)\n    print("El vector resultante es:")\n    for i in range(s):\n        print(vector[i])\n\nleer_caracteres()`, 
+            js: `function leerCaracteres() {\n    let s = parseInt(prompt("Ingrese el tamaño del vector:"));\n    let vector = [];\n    for (let i = 0; i < s; i++) {\n        let caracter = prompt(\`Introduce el caracter \${i + 1}:\`);\n        vector.push(caracter);\n    }\n    console.log("El vector resultante es:");\n    vector.forEach(caracter => console.log(caracter));\n}\n\nleerCaracteres();` },
+
+            { title: "33. Temperaturas en Cº de 10 pacientes", py: `temperaturas = []\nfor i in range(10):\n    temperatura = float(input(f"Temperatura {i+1}: "))\n    temperaturas.append(temperatura)\n\nprint("Las temperaturas de los 10 pacientes en Celsius son:")\nfor temperatura in temperaturas:\n    print(temperatura)`,js: `let temperaturas = [];\nfor (let i = 0; i < 10; i++) {\n    let temperatura = parseFloat(prompt(\`Temperatura \${i+1}:\`));\n    temperaturas.push(temperatura);\n}\n\nconsole.log("Las temperaturas de los 10 pacientes en Celsius son:");\ntemperaturas.forEach(temperatura => console.log(temperatura));` },
+
+            { title: "34. Toneladas mensuales", py: `toneladas = []\nfor i in range(12):\n    toneladas.append(float(input(f"Ingrese toneladas {i + 1} de 2024: ")))\n\nprint(f"Toneladas mensuales de 2024: {toneladas}")\npromedio = sum(toneladas) / len(toneladas)\nprint(f"Promedio de toneladas de 2024: {promedio}")`, 
+            js: `let toneladas = [];\nfor (let i = 0; i < 12; i++) {\n    toneladas.push(parseFloat(prompt(\`Ingrese toneladas \${i + 1} de 2024:\`)));\n}\nconsole.log("Toneladas mensuales de 2024:", toneladas);\nlet promedio = toneladas.reduce((a, b) => a + b, 0) / toneladas.length;\nconsole.log("Promedio de toneladas de 2024:", promedio);` },
+
+            { title: "35. Vector de 500 posiciones", py: `vector = (i * 0.1 for i in range(500))\nfor i in vector:\n    print(i)`, js: `let vector = Array.from({length: 500}, (_, i) => i * 0.1);\nvector.forEach(i => console.log(i));` },
+
+            { title: "36. Matriz 5x5", py: `Me = [[0 for _ in range(5)] for _ in range(5)]\n\nfor i in range(1, 6):\n    for j in range(1, 6):\n        Me[i-1][j-1] = 0\n\nfor fila in Me:\n    print(fila)`, 
+            js: `let Me = Array(5).fill().map(() => Array(5).fill(0));\nMe.forEach(fila => console.log(fila));` },
+
+            { title: "37. Suma de dos matrices", py: `def sumar_matrices(matriz1, matriz2):\n    filas = len(matriz1)\n    columnas = len(matriz1[0])\n    \n    matriz_result = [[matriz1[i][j] + matriz2[i][j] for j in range(columnas)] for i in range(filas)]\n    \n    print("Matriz resultado de la suma:")\n    for fila in matriz_result:\n        print(fila)`, 
+            js: `function sumarMatrices(matriz1, matriz2) {\n    let filas = matriz1.length;\n    let columnas = matriz1[0].length;\n    \n    let matrizResult = Array.from({length: filas}, (_, i) => \n        Array.from({length: columnas}, (_, j) => matriz1[i][j] + matriz2[i][j])\n    );\n    \n    console.log("Matriz resultado de la suma:");\n    matrizResult.forEach(fila => console.log(fila));\n}` },
+
+            { title: "38. Suma de dos vectores unidimensionales", py: `def sumar_vectores(vector1, vector2):\n    # Verificar si los vectores tienen la misma longitud\n    if len(vector1) != len(vector2):\n        raise ValueError("Los vectores deben tener la misma longitud")\n\n    # Sumar los vectores\n    vector_resultado = [a + b for a, b in zip(vector1, vector2)]\n\n    return vector_resultado`, 
+            js: `function sumarVectores(vector1, vector2) {\n    if (vector1.length !== vector2.length) {\n        throw new Error("Los vectores deben tener la misma longitud");\n    }\n    let vectorResultado = vector1.map((a, i) => a + vector2[i]);\n    return vectorResultado;\n}` },
+
+            { title: "39. 10 caracteres en un vector", py: `def leer_caracteres():\n    vector = []\n    for i in range(10):\n        caracter = input(f"Ingrese caracter {i+1}: ")\n        vector.append(caracter)\n    return vector\n\nvector = leer_caracteres()\nprint("Vector de caracteres:")\nprint(vector)`, 
+            js: `function leerCaracteres() {\n    let vector = [];\n    for (let i = 0; i < 10; i++) {\n        let caracter = prompt(\`Ingrese caracter \${i+1}:\`);\n        vector.push(caracter);\n    }\n    console.log("Vector de caracteres:", vector);\n}\n\nleerCaracteres();` },
+
+            { title: "40. Espacios vacíos 10x10", py: `matriz = [[0 for _ in range(10)] for _ in range(10)]\n\nfor i in range(10):\n    for j in range(10):\n        if matriz[i][j] == 0:\n            print(f"La posición ({i+1}, {j+1}) está vacía")`, 
+            js: `let matriz = Array.from({ length: 10 }, () => Array(10).fill(0));\n\nfor (let i = 0; i < 10; i++) {\n    for (let j = 0; j < 10; j++) {\n        if (matriz[i][j] === 0) {\n            console.log(\`La posición (\${i + 1}, \${j + 1}) está vacía\`);\n        }\n    }\n}` },
+
+            { title: "41. Valor entero matriz 3x3", py: `# Crear una matriz de 3x3\nmatriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]\n\n# Leer valores enteros para la matriz\nfor i in range(3):\n    for j in range(3):\n        matriz[i][j] = int(input(f"Ingrese valor entero para la posición ({i+1}, {j+1}): "))\n\n# Imprimir la matriz\nprint("Matriz:")\nfor fila in matriz:\n    print(fila)`, 
+            js: `let matriz = Array.from({ length: 3 }, () => Array(3).fill(0));\n\nfor (let i = 0; i < 3; i++) {\n    for (let j = 0; j < 3; j++) {\n        matriz[i][j] = parseInt(prompt(\`Ingrese valor entero para la posición (\${i+1}, \${j+1}):\`));\n    }\n}\nconsole.log("Matriz:");\nmatriz.forEach(fila => console.log(fila));` },
+
+            { title: "42. Número mayor en matriz 5x5", py: `def leer_caracteres(num_caracteres):\n    vector = []\n    for i in range(num_caracteres):\n        while True:\n            caracter = input(f"Ingrese caracter {i+1}: ")\n            if len(caracter) == 1:\n                vector.append(caracter)\n                break\n            else:\n                print("Error: por favor ingrese solo un caracter.")\n    return vector\n\nnum_caracteres = 10\nvector = leer_caracteres(num_caracteres)\nprint("Vector de caracteres:")\nprint(vector)`, 
+            js: `function leerCaracteres(numCaracteres) {\n    let vector = [];\n    for (let i = 0; i < numCaracteres; i++) {\n        let caracter;\n        do {\n            caracter = prompt(\`Ingrese caracter \${i+1}:\`);\n            if (caracter.length === 1) {\n                vector.push(caracter);\n                break;\n            } else {\n                console.log("Error: por favor ingrese solo un caracter.");\n            }\n        } while (true);\n    }\n    console.log("Vector de caracteres:", vector);\n}\n\nleerCaracteres(10);` },
+
+            { title: "43. Leer dos números e imprimir mayor y menor de ellos", 
+            py: `N1 = float(input("Ingrese número 1: "))\nN2 = float(input("Ingrese número 2: "))\n\nif N1 > N2:\n    print(f"Número mayor: {N1}")\n    print(f"Número menor: {N2}")\nelif N1 < N2:\n    print(f"Número mayor: {N2}")\n    print(f"Número menor: {N1}")\nelse:\n    print("Ambos números son iguales.")`, 
+            js: `let N1 = parseFloat(prompt("Ingrese número 1:"));\nlet N2 = parseFloat(prompt("Ingrese número 2:"));\n\nif (N1 > N2) {\n    console.log(\`Número mayor: \${N1}\`);\n    console.log(\`Número menor: \${N2}\`);\n} else if (N1 < N2) {\n    console.log(\`Número mayor: \${N2}\`);\n    console.log(\`Número menor: \${N1}\`);\n} else {\n    console.log("Ambos números son iguales.");\n}` },
+            
+            { title: "44. Leer tres números e imprimir mayor y menor de ellos", py: `N1=float(input("Ingrese número 1:"))\nN2=float(input("Ingrese número 2:"))\nN3=float(input("Ingrese número 3:"))\nif(N1>N2)and(N1>N3)and(N2>N3):print(f"{N1}es mayor y {N3}es menor")\nelif(N1>N2)and(N1>N3)and(N3>N2):print(f"{N1}es mayor y {N2}es menor")\nelif(N2>N1)and(N2>N3)and(N1>N3):print(f"{N2}es mayor y {N3}es menor")\nelif(N2>N1)and(N2>N3)and(N3>N1):print(f"{N2}es mayor y {N1}es menor")\nelif(N3>N1)and(N3>N2)and(N2>N1):print(f"{N3}es mayor y {N1}es menor")\nelif(N3>N1)and(N3>N2)and(N1>N2):print(f"{N3}es mayor y {N2}es menor")`, 
+            js: `function leerTresNumeros(){\nlet N1=parseFloat(prompt("Ingrese número 1:"));\nlet N2=parseFloat(prompt("Ingrese número 2:"));\nlet N3=parseFloat(prompt("Ingrese número 3:"));\nif(N1>N2&&N1>N3&&N2>N3){console.log(\`\${N1}es mayor y \${N3}es menor\`);}\nelif(N1>N2&&N1>N3&&N3>N2){console.log(\`\${N1}es mayor y \${N2}es menor\`);}\nelif(N2>N1&&N2>N3&&N1>N3){console.log(\`\${N2}es mayor y \${N3}es menor\`);}\nelif(N2>N1&&N2>N3&&N3>N1){console.log(\`\${N2}es mayor y \${N1}es menor\`);}\nelif(N3>N1&&N3>N2&&N2>N1){console.log(\`\${N3}es mayor y \${N1}es menor\`);}\nelif(N3>N1&&N3>N2&&N1>N2){console.log(\`\${N3}es mayor y \${N2}es menor\`);}}\nleerTresNumeros();`},
+           
+            { title: "45. Fibonacci", py: `A=0\nB=1\nfor _ in range(10):\n    C=A+B\n    print(C)\n    A=B\n    B=C`, 
+            js: `function fibonacci(){\n    let A=0;\n    let B=1;\n    console.log(A);\n    console.log(B);\n    for(let i=2;i<10;i++){\n        let C=A+B;\n        console.log(C);\n        A=B;\n        B=C;\n    }\n}\nfibonacci();`},
+
+            { title: "45-1. Ingrese calificación", py: `calif=float(input("Ingrese la calificación:"))\nif(calif>=0)and(calif<=5.9):print("Reprobado")\nelif(calif>=6)and(calif<=6.9):print("Aprobado bajo")\nelif(calif>=7)and(calif<=8.9):print("Aprobado medio")\nelif(calif>=9)and(calif<=10):print("Aprobado excelente")\nelse:print("Calificación fuera de rango")`, 
+            js: `function ingresarCalificacion(){\n    let calif=parseFloat(prompt("Ingrese la calificación:"));\n    if(calif>=0&&calif<=5.9){console.log("Reprobado");}\n    else if(calif>=6&&calif<=6.9){console.log("Aprobado bajo");}\n    else if(calif>=7&&calif<=8.9){console.log("Aprobado medio");}\n    else if(calif>=9&&calif<=10){console.log("Aprobado excelente");}\n    else{console.log("Calificación fuera de rango");}\n}\ningresarCalificacion();`},
+            
+            { title: "46. Suma de lista de productos", py: `total=0\nwhile True:\n    compra=float(input("Ingrese el total de la compra (0.0 para terminar):"))\n    if compra==0.0:\n        break\n    total+=compra\nprint(f"Total a pagar:{$total:.2f}")`, 
+            js: `function sumarListaProductos(){\n    let total=0;\n    while(true){\n        let compra=prompt("Ingrese el total de la compra (0.0 para terminar):");\n        if(compra===null||compra.trim()===""){break;}\n        compra=parseFloat(compra);\n        if(isNaN(compra)||compra<0){\n            console.log("Ingrese un valor válido.");\n            continue;\n        }\n        if(compra===0){break;}\n        total+=compra;\n    }\n    console.log(\`Total a pagar: $\${total.toFixed(2)}\`);\n}\nsumarListaProductos();`},
+       
+            { title: "47. Suma acumulada en bucle", py: `S=0\nC=100\ncontador=0\nfor _ in range(35):\n    S=S+C\n    C=S\n    contador+=S\nprint(f"Total S:{contador}")`, 
+            js: `function sumaAcumulada(){\n    let S=0;\n    let C=100;\n    let contador=0;\n    for(let i=0;i<35;i++){\n        let temp=S+C;\n        S=C;\n        C=temp;\n        contador+=S;\n    }\n    console.log(\`Total S:\${contador}\`);\n}\nsumaAcumulada();`},
+  
+            { title: "48. Fibonacci con iteraciones",  py: `print("Programa Fibonacci los primeros 10 valores")\na=0\nb=1\nfor i in range(1,11):\n    c=a+b\n    print("Valor Fibonacci:",a,"+",b,"=",c,"/ Iteración",i)\n    a=b\n    b=c\nprint("Fin del programa Fibonacci")`, 
+            js: `function fibonacciIteraciones(){\n    console.log("Programa Fibonacci los primeros 10 valores");\n    let a=0;\n    let b=1;\n    for(let i=1;i<=10;i++){\n        let c=a+b;\n        console.log(\`Valor Fibonacci: \${a} + \${b} = \${c} / Iteración \${i}\`);\n        a=b;\n        b=c;\n    }\n    console.log("Fin del programa Fibonacci");\n}\nfibonacciIteraciones();`},
+
+            { title: "48.1. Fibonacci desde 100 (35 términos)",  py: `A=100\nB=101\nfibonacci=[A,B]\nfor _ in range(33):\n    C=A+B\n    fibonacci.append(C)\n    A=B\n    B=C\nsuma_total=sum(fibonacci)\nprint("Secuencia de Fibonacci desde 100 (35 términos):")\nprint(fibonacci)\nprint(f"\\nSuma total de los 35 términos:{suma_total}")`, 
+            js: `function fibonacciDesde100(){\n    let A=100;\n    let B=101;\n    let fibonacci=[A,B];\n    for(let i=0;i<33;i++){\n        let C=A+B;\n        fibonacci.push(C);\n        A=B;\n        B=C;\n    }\n    let sumaTotal=fibonacci.reduce((acc,num)=>acc+num,0);\n    console.log("Secuencia de Fibonacci desde 100 (35 términos):");\n    console.log(fibonacci);\n    console.log(\`\\nSuma total de los 35 términos:\${sumaTotal}\`);\n}\nfibonacciDesde100();`},
+    
+            { title: "49. Hola Mundo", py: `print("Hola mundo")\nfor i in range(1,11):\n    print(i)`, 
+            js: `function holaMundoIteracion(){\n    console.log("Hola mundo");\n    for(let i=1;i<=10;i++){\n        console.log(i);\n    }\n}\nholaMundoIteracion();`},
+    
+            { title: "50. Contador con while", py: `c=1\nwhile(c<=10):\n    print(c)\n    c=c+1`, 
+            js: `function contadorWhile(){\n    let c=1;\n    while(c<=10){\n        console.log(c);\n        c++;\n    }\n}\ncontadorWhile();`},
+    
+            { title: "51. Clasificación de una calificación", py: `cal=0\ncal=float(input("Ingresa una calificación:"))\nif(cal>=0)and(cal<=5):print("reprobado")\nif(cal>5)and(cal<6):print("mal")\nif(cal>=6)and(cal<7):print("bajo")\nif(cal>=7)and(cal<8):print("medio")\nif(cal>=8)and(cal<9):print("alto")\nif(cal>=9)and(cal<=10):print("muy alto")\nif(cal>10)or(cal<0):print("fuera de rango")`, 
+            js: `function clasificacionCalificacion(){\n    let cal=parseFloat(prompt("Ingresa una calificación:"));\n    if(cal>=0&&cal<=5){console.log("reprobado");}\n    if(cal>5&&cal<6){console.log("mal");}\n    if(cal>=6&&cal<7){console.log("bajo");}\n    if(cal>=7&&cal<8){console.log("medio");}\n    if(cal>=8&&cal<9){console.log("alto");}\n    if(cal>=9&&cal<=10){console.log("muy alto");}\n    if(cal>10||cal<0){console.log("fuera de rango");}\n}\nclasificacionCalificacion();`},
+    
+            { title: "52. Fibonacci básico", py: `a=0\nb=1\nc=0\nfor i in range(1,11):\n    c=a+b\n    a=b\n    b=c\n    print(c)`, 
+            js: `function fibonacciBasico(){\n    let a=0;\n    let b=1;\n    let c=0;\n    for(let i=1;i<=10;i++){\n        c=a+b;\n        a=b;\n        b=c;\n        console.log(c);\n    }\n}\nfibonacciBasico();`},
+ 
+            { title: "53. Cálculo de impuestos y suma de productos",  py: `print("Try programiz.pro")\np=float(input())\ns=0\nwhile(p!=0):\n    s+=p\n    iva=p*(16/100)\n    print("precio del producto:",p,"su impuesto:",iva)\n    p=float(input())\nprint("Suma total de productos:",s)`, 
+            js: `function calcularImpuestos(){\n    console.log("Try programiz.pro");\n    let p=parseFloat(prompt("Ingrese el precio del producto (0 para terminar):"));\n    let s=0;\n    while(p!==0){\n        s+=p;\n        let iva=p*0.16;\n        console.log(\`precio del producto: \${p} su impuesto: \${iva}\`);\n        p=parseFloat(prompt("Ingrese el precio del producto (0 para terminar):"));\n    }\n    console.log(\`Suma total de productos: \${s}\`);\n}\ncalcularImpuestos();`},
+    
+            { title: "54. Cálculo de impuestos y suma de productos con IVA", py: `s=0\np=float(input("Introduce el precio del producto (0 para terminar):"))\nwhile p!=0:\n    s+=p\n    IVA=p*(16/100)\n    print(f"Precio del producto:{p}, su impuesto:{IVA}")\n    p=float(input("Introduce el precio del producto (0 para terminar):"))\nprint(f"Suma total de los productos:{s}")`, 
+            js: `function calcularImpuestosV2(){\n    let s=0;\n    let p=parseFloat(prompt("Introduce el precio del producto (0 para terminar):"));\n    while(p!==0){\n        s+=p;\n        let IVA=p*0.16;\n        console.log(\`Precio del producto: \${p}, su impuesto: \${IVA}\`);\n        p=parseFloat(prompt("Introduce el precio del producto (0 para terminar):"));\n    }\n    console.log(\`Suma total de los productos: \${s}\`);\n}\ncalcularImpuestosV2();`},
+    
+            { title: "55. Suma total de ventas", 
+            py: `totalven=0\nprint("Ingrese las ventas. Escriba 'fin' para terminar")\nwhile(entrada:=input("Venta:"))!="fin":\n    if entrada.replace(".","",1).isdigit():\n        totalven+=float(entrada)\n    else:\n        print("Número inválido")\nprint(f"Total:{totalven}")`, 
+            js: `function sumaTotalVentas(){\n    let totalven=0;\n    console.log("Ingrese las ventas. Escriba 'fin' para terminar");\n    let entrada=prompt("Venta:");\n    while(entrada!=="fin"){\n        if(!isNaN(entrada)&&entrada.trim()!==""){\n            totalven+=parseFloat(entrada);\n        }else{\n            console.log("Número inválido");\n        }\n        entrada=prompt("Venta:");\n    }\n    console.log(\`Total: \${totalven}\`);\n}\nsumaTotalVentas();`},
+
+            { title: "56. Captura de valores en un vector", py: `vector=[]\ncontador=0\nwhile(contador<9):\n    valor=input(f"ingresa el valor {contador+1}:")\n    vector.append(valor)\n    contador+=1`, 
+            js: `function capturaVector(){\n    let vector=[];\n    let contador=0;\n    while(contador<9){\n        let valor=prompt(\`Ingresa el valor \${contador+1}:\`);\n        vector.push(valor);\n        contador++;\n    }\n    console.log("Valores capturados:",vector);\n}\ncapturaVector();`}, 
+
+            { title: "57. Tabla del 5", py: `tabla_5=[]\nfor i in range(1,11):\n    resultado=5*i\n    tabla_5.append(resultado)\n    print(f"{5} * {i} = {resultado}")`, 
+            js: `function tablaDelCinco(){\n    let tabla_5=[];\n    for(let i=1;i<=10;i++){\n        let resultado=5*i;\n        tabla_5.push(resultado);\n        console.log(\`5 * \${i} = \${resultado}\`);\n    }\n}\ntablaDelCinco();`}, 
+
+            { title: "58. Suma de dos vectores", py: `V1=[int(input(f"Ingrese el número {i+1} para el primer vector:"))for i in range(10)]\nV2=[int(input(f"Ingrese el número {i+1} para el segundo vector:"))for i in range(10)]\nfor i in range(10):\n    suma=V1[i]+V2[i]\n    print(f"{V1[i]} + {V2[i]} = {suma}")`, 
+            js: `function sumaVectores(){\n    let V1=[];\n    let V2=[];\n    for(let i=0;i<10;i++){\n        V1.push(parseInt(prompt(\`Ingrese el número \${i+1} para el primer vector:\`)));\n    }\n    for(let i=0;i<10;i++){\n        V2.push(parseInt(prompt(\`Ingrese el número \${i+1} para el segundo vector:\`)));\n    }\n    for(let i=0;i<10;i++){\n        let suma=V1[i]+V2[i];\n        console.log(\`\${V1[i]} + \${V2[i]} = \${suma}\`);\n    }\n}\nsumaVectores();`},
+
+            { title: "59. Suma en dos vectores ", py: `V1=[int(input(f"Ingrese el número {i+1} para el primer vector:"))for i in range(10)]\nV2=[int(input(f"Ingrese el número {i+1} para el segundo vector:"))for i in range(10)]\nfor i in range(10):\n    suma=V1[i]+V2[i]\n    print(f"{V1[i]} + {V2[i]} = {suma}")`, 
+            js: `function sumaVectoresV2(){\n    let V1=[];\n    let V2=[];\n    for(let i=0;i<10;i++){\n        V1.push(parseInt(prompt(\`Ingrese el número \${i+1} para el primer vector:\`)));\n    }\n    for(let i=0;i<10;i++){\n        V2.push(parseInt(prompt(\`Ingrese el número \${i+1} para el segundo vector:\`)));\n    }\n    for(let i=0;i<10;i++){\n        let suma=V1[i]+V2[i];\n        console.log(\`\${V1[i]} + \${V2[i]} = \${suma}\`);\n    }\n}\nsumaVectoresV2();`},
+
+            { title: "60. Conversión de Celsius a Fahrenheit", py: `def gradocentigrados_a_fahrenheit(grados_celsius):\n    return (grados_celsius * 9/5) + 32\n\ngrados_celsius=float(input("Introduce los grados Celsius:"))\ngrados_fahrenheit=gradocentigrados_a_fahrenheit(grados_celsius)\nprint(f"{grados_celsius}°C equivalen a {grados_fahrenheit}°F")`, 
+            js: `function celsiusAFahrenheit(gradosCelsius){\n    return (gradosCelsius * 9/5) + 32;\n}\nlet gradosCelsius=parseFloat(prompt("Introduce los grados Celsius:"));\nlet gradosFahrenheit=celsiusAFahrenheit(gradosCelsius);\nconsole.log(\`\${gradosCelsius}°C equivalen a \${gradosFahrenheit}°F\`);`}
+    
+
+    ];
+
+    // Variable que manejará el estado de visibilidad (inicialmente, los códigos están ocultos).
+    var codesVisible = false;
+
+    // Insertar dinámicamente cada fila en el cuerpo de la tabla.
+    // Nota: si deseas que al pulsar sobre el título también se active el toggle, 
+    // puedes usar el evento onclick en el enlace (<a>).
+    var tbody = document.querySelector("#codeTable tbody");
+    tbody.innerHTML = codes.map((code, index) => `
+      <tr>
+          <td><a href="#" onclick="toggleAllCodes()">${code.title}</a></td>
+          <td><pre id="pyCode${index}" style="display:none;">${code.py}</pre></td>
+          <td><pre id="jsCode${index}" style="display:none;">${code.js}</pre></td>
+      </tr>
+    `).join('');
+
+    // Función que alterna (toggle) la visibilidad de todos los códigos.
+    function toggleAllCodes() {
+      // Cambiamos el estado a su contrario.
+      codesVisible = !codesVisible;
+      
+      // Iteramos sobre todos los elementos del arreglo 'codes' para mostrar u ocultar.
+      codes.forEach((_, index) => {
+        document.getElementById(`pyCode${index}`).style.display = codesVisible ? "block" : "none";
+        document.getElementById(`jsCode${index}`).style.display = codesVisible ? "block" : "none";
+      });
+
+      // Actualizamos el texto del botón según el estado.
+      document.getElementById("toggleButton").innerText = codesVisible 
+        ? "Ocultar todos los códigos" 
+        : "Mostrar todos los códigos";
+    }
+  </script>
+
+</body>
+
+    <h1>Códigos de Python a JavaScript</h1>
+    <p>60 codigos</p>
+
+    <table id="codeTable">
+        <tr>
+            <th>Seleccionar</th>
+            <th>Código en Python</th>
+            <th>Código en JavaScript</th>
+        </tr>
+    </table>
+
+    <script>
+        let codes = [
+            { title: "1.Leer número dividido en dos", py: `número = float(input('Ingrese un número: '))\nresultado = número / 2\nprint('El resultado de la división es:', resultado)`, js: `let numero = parseFloat(prompt('Ingrese un número:'));\nlet resultado = numero / 2;\nconsole.log('El resultado de la división es:', resultado);` },
+            
+            { title: "2.Cubo de un número", py: `numero = int(input("Ingrese un número: "))\nresultado = numero * numero * numero\nprint("El resultado del cubo de ese número es:", resultado)`, js: `let numero = parseInt(prompt("Ingrese un número:"));\nlet resultado = numero * numero * numero;\nconsole.log("El resultado del cubo de ese número es:", resultado);` },
+            
+            { title: "3.Área de un cuadrado", py: `numero = float(input("Ingrese número: "))\narea = numero * numero\nprint("El área del cuadrado es:", area)`, js: `let numero = parseFloat(prompt("Ingrese número:"));\nlet area = numero * numero;\nconsole.log("El área del cuadrado es:", area);` },
+
+            { title: "4.Área de un triángulo", py: `base = float(input("Ingrese la base del triángulo: "))\naltura = float(input("Ingrese la altura del triángulo: "))\narea = (base * altura) / 2\nprint("El área del triángulo es:", area)`, js: `let base = parseFloat(prompt("Ingrese la base del triángulo:"));\nlet altura = parseFloat(prompt("Ingrese la altura del triángulo:"));\nlet area = (base * altura) / 2;\nconsole.log("El área del triángulo es:", area);` },
+
+            { title: "5.Área de un rectángulo", py: `base = float(input("Ingrese la base del rectángulo: "))\naltura = float(input("Ingrese la altura del rectángulo: "))\narea = base * altura\nprint("El área del rectángulo es:", area)`, js: `let base = parseFloat(prompt("Ingrese la base del rectángulo:"));\nlet altura = parseFloat(prompt("Ingrese la altura del rectángulo:"));\nlet area = base * altura;\nconsole.log("El área del rectángulo es:", area);` },
+
+            { title: "6.Área de un círculo", py: `radio = float(input("Ingrese el radio del círculo: "))\narea = 3.1416 * radio * radio \nprint("El área del círculo es:", area)`, js: `let radio = parseFloat(prompt("Ingrese el radio del círculo:"));\nlet area = 3.1416 * radio * radio;\nconsole.log("El área del círculo es:", area);` },
+
+            { title: "7.Área de un trapecio", py: `basemayor = float(input("Ingrese base mayor: "))\nbasemenor = float(input("Ingrese base menor: "))\naltura = float(input("Ingrese altura: "))\narea = (basemayor + basemenor) * altura / 2\nprint("El área del trapecio es:", area)`, js: `let basemayor = parseFloat(prompt("Ingrese base mayor:"));\nlet basemenor = parseFloat(prompt("Ingrese base menor:"));\nlet altura = parseFloat(prompt("Ingrese altura:"));\nlet area = (basemayor + basemenor) * altura / 2;\nconsole.log("El área del trapecio es:", area);` },
+
+            { title: "8.Área de un cilindro", py: `radio = float(input("Ingrese radio: "))\naltura = float(input("Ingrese altura: "))\narea = 2 * 3.1416 * radio * (radio + altura)\nprint("El área del cilindro es:", area)`, js: `let radio = parseFloat(prompt("Ingrese radio:"));\nlet altura = parseFloat(prompt("Ingrese altura:"));\nlet area = 2 * 3.1416 * radio * (radio + altura);\nconsole.log("El área del cilindro es:", area);` },
+
+            { title: "9.IVA", py: `Precio = float(input("Ingrese precio: "))\nPrecioTotal = Precio + ((Precio * 16 )/100)\nprint("El precio Total es :", PrecioTotal)`, js: `let precio = parseFloat(prompt("Ingrese precio:"));\nlet precioTotal = precio + ((precio * 16) / 100);\nconsole.log("El precio Total es :", precioTotal);` },
+
+            { title: "10.Celsius a Fahrenheit", py: `Celsiusº = float(input("Ingrese Temperatura en Celsius: "))\nFahrenheitº = ((9/5)* Celsiusº) + 32\nprint("Temperatura en Fahrenheit :", Fahrenheitº)`, js: `let celsius = parseFloat(prompt("Ingrese Temperatura en Celsius:"));\nlet fahrenheit = ((9/5) * celsius) + 32;\nconsole.log("Temperatura en Fahrenheit :", fahrenheit);` },
+
+            { title: "11.Fahrenheit a Celsius", py: `Fahrenheitº = float(input("Ingrese Temperatura en Fahrenheit: "))\nCelsiusº = (Fahrenheitº - 32) * 5/9 \nprint("Temperatura en Celsius :", Celsiusº)`, js: `let fahrenheit = parseFloat(prompt("Ingrese Temperatura en Fahrenheit:"));\nlet celsius = (fahrenheit - 32) * 5/9;\nconsole.log("Temperatura en Celsius :", celsius);` },
+
+            { title: "12.Libras a Kilos", py: `libras = float(input("Ingrese libras: "))\nKg = libras * 0.4336 \nprint("Kilogramos es:", Kg)`, js: `let libras = parseFloat(prompt("Ingrese libras:"));\nlet kg = libras * 0.4336;\nconsole.log("Kilogramos es:", kg);` },
+
+            { title: "13.Kilos en gramos y toneladas", py: `Kilos = float(input("Ingrese peso en kg: "))\nGramos = Kilos * 1000  \nToneladas = Kilos / 1000\nprint("Gramos:", Gramos)\nprint("Toneladas:", Toneladas)`, js: `let kilos = parseFloat(prompt("Ingrese peso en kg:"));\nlet gramos = kilos * 1000;\nlet toneladas = kilos / 1000;\nconsole.log("Gramos:", gramos);\nconsole.log("Toneladas:", toneladas);` },
+        
+            { title: "14.Calcular la pendiente", py: `x1 = float(input("Ingrese X1: "))\ny1 = float(input("Ingrese Y1: "))\nx2 = float(input("Ingrese X2: "))\ny2 = float(input("Ingrese Y2: "))\nm = (y2 - y1) / (x2 - x1)\nprint("La pendiente es:", m)`, js: `let x1 = parseFloat(prompt("Ingrese X1:"));\nlet y1 = parseFloat(prompt("Ingrese Y1:"));\nlet x2 = parseFloat(prompt("Ingrese X2:"));\nlet y2 = parseFloat(prompt("Ingrese Y2:"));\nlet pendiente = (y2 - y1) / (x2 - x1);\nconsole.log("La pendiente es:", pendiente);` },
+
+            { title: "15.Mayor a 0", py: `N = int(input("Ingrese un número: "))\nif N > 0:\n    print("El valor es positivo")\nelse:\n    print("El valor es negativo")`, js: `let N = parseInt(prompt("Ingrese un número:"));\nif (N > 0) {\n    console.log("El valor es positivo");\n} else {\n    console.log("El valor es negativo");\n}` },
+
+            { title: "16. Número divisible entre dos", py: `N = int(input("Ingrese un número: "))\n\nif N % 2 == 0:\n    print("Valor divisible")\nelse:\n    print("No es divisible")`, js: `let N = parseInt(prompt("Ingrese un número:"));\n\nif (N % 2 === 0) {\n    console.log("Valor divisible");\n} else {\n    console.log("No es divisible");\n}` },
+
+            { title: "17. Número divisible entre tres", py: `if 9 % 3 == 0:\n    print("9 es divisible entre tres")\nelse:\n    print("9 no es divisible entre tres")\n\nif 15 % 3 == 0:\n    print("15 es divisible entre tres")\nelse:\n    print("15 no es divisible entre tres")\n\nif 13 % 3 == 0:\n    print("13 es divisible entre tres")\nelse:\n    print("13 no es divisible entre tres")\n\nif 19 % 3 == 0:\n    print("19 es divisible entre tres")\nelse:\n    print("19 no es divisible entre tres")\n\nif 27 % 3 == 0:\n    print("27 es divisible entre tres")\nelse:\n    print("27 no es divisible entre tres")\n\nif 34 % 3 == 0:\n    print("34 es divisible entre tres")\nelse:\n    print("34 no es divisible entre tres")\n\nif 39 % 3 == 0:\n    print("39 es divisible entre tres")\nelse:\n    print("39 no es divisible entre tres")`, 
+
+             js: `if (9 % 3 === 0) {\n    console.log("9 es divisible entre tres");\n} else {\n    console.log("9 no es divisible entre tres");\n}\n\nif (15 % 3 === 0) {\n    console.log("15 es divisible entre tres");\n} else {\n    console.log("15 no es divisible entre tres");\n}\n\nif (13 % 3 === 0) {\n    console.log("13 es divisible entre tres");\n} else {\n    console.log("13 no es divisible entre tres");\n}\n\nif (19 % 3 === 0) {\n    console.log("19 es divisible entre tres");\n} else {\n    console.log("19 no es divisible entre tres");\n}\n\nif (27 % 3 === 0) {\n    console.log("27 es divisible entre tres");\n} else {\n    console.log("27 no es divisible entre tres");\n}\n\nif (34 % 3 === 0) {\n    console.log("34 es divisible entre tres");\n} else {\n    console.log("34 no es divisible entre tres");\n}\n\nif (39 % 3 === 0) {\n    console.log("39 es divisible entre tres");\n} else {\n    console.log("39 no es divisible entre tres");\n}`},
+
+             { title: "18. Intervalo del 5 al 10", py: `numero = float(input("Ingrese un numero: "))\n\nif (numero > 5) and (numero > 10):\n    print("El número está en el intervalo")\nelse:\n    print("El número no está en el intervalo")`, js: `let numero = parseFloat(prompt("Ingrese un número:"));\n\nif (numero > 5 && numero > 10) {\n    console.log("El número está en el intervalo");\n} else {\n    console.log("El número no está en el intervalo");\n}` },
+
+             { title: "19. Alumno reprobado o aprobado", py: `numero = float(input("Ingrese un numero: "))\n\nif numero > 7:\n    print("El alumno está aprobado")\nelse:\n    print("El alumno está reprobado")`, js: `let numero = parseFloat(prompt("Ingrese un número:"));\n\nif (numero > 7) {\n    console.log("El alumno está aprobado");\n} else {\n    console.log("El alumno está reprobado");\n}` },
+
+             { title: "20. Calificación: Regular, Bueno, Muy bueno, Excelente", py: `calif = float(input("Ingrese la calificación del alumno: "))\n\nif 6 <= calif <= 6.9:\n    print("Regular")\nelif 7 <= calif <= 7.9:\n    print("Bueno")\nelif 8 <= calif <= 8.9:\n    print("Muy bueno")\nelif 9 <= calif <= 10:\n    print("Excelente")`, 
+
+            js: `let calif = parseFloat(prompt("Ingrese la calificación del alumno:"));\n\nif (calif >= 6 && calif <= 6.9) {\n    console.log("Regular");\n} else if (calif >= 7 && calif <= 7.9) {\n    console.log("Bueno");\n} else if (calif >= 8 && calif <= 8.9) {\n    console.log("Muy bueno");\n} else if (calif >= 9 && calif <= 10) {\n    console.log("Excelente");\n}` },
+             
+            { title: "21.Tabla de multiplicar del 2", py: `x = 2\nfor i in range(1, 11):\n    result = x * i\n    print(f"{x} x {i} = {result}")`, 
+            js: `let x = 2;\nfor (let i = 1; i <= 10; i++) {\n    let result = x * i;\n    console.log(\`\${x} x \${i} = \${result}\`);\n}` },
+
+            { title: "22.Tabla de multiplicar del 5", py: `x = 5\nfor i in range(1, 11):\n    result = x * i\n    print(f"{x} x {i} = {result}")`, 
+            js: `let x = 5;\nfor (let i = 1; i <= 10; i++) {\n    let result = x * i;\n    console.log(\`\${x} x \${i} = \${result}\`);\n}` },
+
+            { title: "23.El cuadrado de 10 números", py: `for i in range(1, 11):\n    result = i * i\n    print(f"{i} x {i} = {result}")`, 
+            js: `for (let i = 1; i <= 10; i++) {\n    let result = i * i;\n    console.log(\`\${i} x \${i} = \${result}\`);\n}` },
+
+            { title: "24.Números pares del 0 al 20", py: `for i in range(0, 21, 2):\n    print("Número par:", i)`, js: `for (let i = 0; i <= 20; i += 2) {\n    console.log("Número par:", i);\n}` },
+
+            { title: "25.Números impares del 1 al 15", py: `for i in range(1, 16):\n    if i % 2 == 1:\n        print(f"{i}")`, js: `for (let i = 1; i <= 15; i++) {\n    if (i % 2 === 1) {\n        console.log(i);\n    }\n}` },
+
+            { title: "26.Vocales de SANTIAGO", py: `Palabra = "santiago"\nvocales = "aeiouAEIOU"\n\nfor letra in Palabra:\n    if letra in vocales:\n        print(letra)`, 
+            js: `let palabra = "santiago";\nlet vocales = "aeiouAEIOU";\n\nfor (let letra of palabra) {\n    if (vocales.includes(letra)) {\n        console.log(letra);\n    }\n}` },
+
+            { title: "27.Sumatoria entre 5,000 y 100,000", py: `c = 0\nfor i in range(5000, 100000):\n    c = c + i\n    print(f"{c} + {i} = {c}")`, js: `let c = 0;\nfor (let i = 5000; i < 100000; i++) {\n    c = c + i;\n    console.log(\`\${c} + \${i} = \${c}\`);\n}` },
+
+            { title: "28.Números pares entre 5 y 15", py: `contador = 0\nfor i in range(5, 16):\n    if i % 2 == 0:\n        contador = contador + 1\nprint(f"Hay: {contador} números pares")`, js: `let contador = 0;\nfor (let i = 5; i <= 15; i++) {\n    if (i % 2 === 0) {\n        contador++;\n    }\n}\nconsole.log(\`Hay: \${contador} números pares\`);` },
+
+            { title: "29.Mayor y menor de 20 números", py: `N = float(input("Ingrese un número: "))\n\nif N <= 1:\n    print("El número debe ser mayor que 1")\nelse:\n    mayor_menor = N\n    for i in range(20):\n        num = float(input("Ingrese un número: "))\n        if num <= N and (num > mayor_menor):\n            mayor_menor = num\n    print("El número mayor menor o igual es:", mayor_menor)`, 
+            js: `let N = parseFloat(prompt("Ingrese un número:"));\n\nif (N <= 1) {\n    console.log("El número debe ser mayor que 1");\n} else {\n    let mayorMenor = N;\n    for (let i = 0; i < 20; i++) {\n        let num = parseFloat(prompt("Ingrese un número:"));\n        if (num <= N && num > mayorMenor) {\n            mayorMenor = num;\n        }\n    }\n    console.log("El número mayor menor o igual es:", mayorMenor);\n}` },
+
+            { title: "30.Promedio de 38 alumnos", py: `contador = 0\nS = 0\nwhile contador <= 39:\n    c = float(input("Ingrese la calificación: "))\n    S = S + c\n    contador = contador + 1\n\npromedio = S / 38\nprint("Promedio:", promedio)`, js: `let contador = 0;\nlet S = 0;\nwhile (contador <= 39) {\n    let c = parseFloat(prompt("Ingrese la calificación:"));\n    S += c;\n    contador++;\n}\nlet promedio = S / 38;\nconsole.log("Promedio:", promedio);` },
+
+            { title: "31.Verificar si el número es primo o no", py: `n = int(input("Ingrese un número: "))\n\nif n <= 1:\n    print("NO es primo")\nelse:\n    es_primo = True\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            print("NO es primo")\n            es_primo = False\n            break\n    if es_primo:\n        print("ES primo")`, 
+            js: `let n = parseInt(prompt("Ingrese un número:"));\n\nif (n <= 1) {\n    console.log("NO es primo");\n} else {\n    let esPrimo = true;\n    for (let i = 2; i <= Math.sqrt(n); i++) {\n        if (n % i === 0) {\n            console.log("NO es primo");\n            esPrimo = false;\n            break;\n        }\n    }\n    if (esPrimo) {\n        console.log("ES primo");\n    }\n}` },
+
+            { title: "32.10 caracteres en vector", py: `def leer_caracteres():\n    s = int(input("Ingrese el tamaño del vector: "))\n    vector = []\n    for i in range(s):\n        caracter = input(f"Introduce el caracter {i + 1}: ")\n        vector.append(caracter)\n    print("El vector resultante es:")\n    for i in range(s):\n        print(vector[i])\n\nleer_caracteres()`, 
+            js: `function leerCaracteres() {\n    let s = parseInt(prompt("Ingrese el tamaño del vector:"));\n    let vector = [];\n    for (let i = 0; i < s; i++) {\n        let caracter = prompt(\`Introduce el caracter \${i + 1}:\`);\n        vector.push(caracter);\n    }\n    console.log("El vector resultante es:");\n    vector.forEach(caracter => console.log(caracter));\n}\n\nleerCaracteres();` },
+
+            { title: "33.Temperaturas en Cº de 10 pacientes", py: `temperaturas = []\nfor i in range(10):\n    temperatura = float(input(f"Temperatura {i+1}: "))\n    temperaturas.append(temperatura)\n\nprint("Las temperaturas de los 10 pacientes en Celsius son:")\nfor temperatura in temperaturas:\n    print(temperatura)`,js: `let temperaturas = [];\nfor (let i = 0; i < 10; i++) {\n    let temperatura = parseFloat(prompt(\`Temperatura \${i+1}:\`));\n    temperaturas.push(temperatura);\n}\n\nconsole.log("Las temperaturas de los 10 pacientes en Celsius son:");\ntemperaturas.forEach(temperatura => console.log(temperatura));` },
+
+            { title: "34.Toneladas mensuales", py: `toneladas = []\nfor i in range(12):\n    toneladas.append(float(input(f"Ingrese toneladas {i + 1} de 2024: ")))\n\nprint(f"Toneladas mensuales de 2024: {toneladas}")\npromedio = sum(toneladas) / len(toneladas)\nprint(f"Promedio de toneladas de 2024: {promedio}")`, 
+            js: `let toneladas = [];\nfor (let i = 0; i < 12; i++) {\n    toneladas.push(parseFloat(prompt(\`Ingrese toneladas \${i + 1} de 2024:\`)));\n}\nconsole.log("Toneladas mensuales de 2024:", toneladas);\nlet promedio = toneladas.reduce((a, b) => a + b, 0) / toneladas.length;\nconsole.log("Promedio de toneladas de 2024:", promedio);` },
+
+            { title: "35.Vector de 500 posiciones", py: `vector = (i * 0.1 for i in range(500))\nfor i in vector:\n    print(i)`, js: `let vector = Array.from({length: 500}, (_, i) => i * 0.1);\nvector.forEach(i => console.log(i));` },
+
+            { title: "36.Matriz 5x5", py: `Me = [[0 for _ in range(5)] for _ in range(5)]\n\nfor i in range(1, 6):\n    for j in range(1, 6):\n        Me[i-1][j-1] = 0\n\nfor fila in Me:\n    print(fila)`, 
+            js: `let Me = Array(5).fill().map(() => Array(5).fill(0));\nMe.forEach(fila => console.log(fila));` },
+
+            { title: "37.Suma de dos matrices", py: `def sumar_matrices(matriz1, matriz2):\n    filas = len(matriz1)\n    columnas = len(matriz1[0])\n    \n    matriz_result = [[matriz1[i][j] + matriz2[i][j] for j in range(columnas)] for i in range(filas)]\n    \n    print("Matriz resultado de la suma:")\n    for fila in matriz_result:\n        print(fila)`, 
+            js: `function sumarMatrices(matriz1, matriz2) {\n    let filas = matriz1.length;\n    let columnas = matriz1[0].length;\n    \n    let matrizResult = Array.from({length: filas}, (_, i) => \n        Array.from({length: columnas}, (_, j) => matriz1[i][j] + matriz2[i][j])\n    );\n    \n    console.log("Matriz resultado de la suma:");\n    matrizResult.forEach(fila => console.log(fila));\n}` },
+
+            { title: "38.Suma de dos vectores unidimensionales", py: `def sumar_vectores(vector1, vector2):\n    # Verificar si los vectores tienen la misma longitud\n    if len(vector1) != len(vector2):\n        raise ValueError("Los vectores deben tener la misma longitud")\n\n    # Sumar los vectores\n    vector_resultado = [a + b for a, b in zip(vector1, vector2)]\n\n    return vector_resultado`, 
+            js: `function sumarVectores(vector1, vector2) {\n    if (vector1.length !== vector2.length) {\n        throw new Error("Los vectores deben tener la misma longitud");\n    }\n    let vectorResultado = vector1.map((a, i) => a + vector2[i]);\n    return vectorResultado;\n}` },
+
+            { title: "39.10 caracteres en un vector", py: `def leer_caracteres():\n    vector = []\n    for i in range(10):\n        caracter = input(f"Ingrese caracter {i+1}: ")\n        vector.append(caracter)\n    return vector\n\nvector = leer_caracteres()\nprint("Vector de caracteres:")\nprint(vector)`, 
+            js: `function leerCaracteres() {\n    let vector = [];\n    for (let i = 0; i < 10; i++) {\n        let caracter = prompt(\`Ingrese caracter \${i+1}:\`);\n        vector.push(caracter);\n    }\n    console.log("Vector de caracteres:", vector);\n}\n\nleerCaracteres();` },
+
+            { title: "40.Espacios vacíos 10x10", py: `matriz = [[0 for _ in range(10)] for _ in range(10)]\n\nfor i in range(10):\n    for j in range(10):\n        if matriz[i][j] == 0:\n            print(f"La posición ({i+1}, {j+1}) está vacía")`, 
+            js: `let matriz = Array.from({ length: 10 }, () => Array(10).fill(0));\n\nfor (let i = 0; i < 10; i++) {\n    for (let j = 0; j < 10; j++) {\n        if (matriz[i][j] === 0) {\n            console.log(\`La posición (\${i + 1}, \${j + 1}) está vacía\`);\n        }\n    }\n}` },
+
+            { title: "41.Valor entero matriz 3x3", py: `# Crear una matriz de 3x3\nmatriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]\n\n# Leer valores enteros para la matriz\nfor i in range(3):\n    for j in range(3):\n        matriz[i][j] = int(input(f"Ingrese valor entero para la posición ({i+1}, {j+1}): "))\n\n# Imprimir la matriz\nprint("Matriz:")\nfor fila in matriz:\n    print(fila)`, 
+            js: `let matriz = Array.from({ length: 3 }, () => Array(3).fill(0));\n\nfor (let i = 0; i < 3; i++) {\n    for (let j = 0; j < 3; j++) {\n        matriz[i][j] = parseInt(prompt(\`Ingrese valor entero para la posición (\${i+1}, \${j+1}):\`));\n    }\n}\nconsole.log("Matriz:");\nmatriz.forEach(fila => console.log(fila));` },
+
+            { title: "42.Número mayor en matriz 5x5", py: `def leer_caracteres(num_caracteres):\n    vector = []\n    for i in range(num_caracteres):\n        while True:\n            caracter = input(f"Ingrese caracter {i+1}: ")\n            if len(caracter) == 1:\n                vector.append(caracter)\n                break\n            else:\n                print("Error: por favor ingrese solo un caracter.")\n    return vector\n\nnum_caracteres = 10\nvector = leer_caracteres(num_caracteres)\nprint("Vector de caracteres:")\nprint(vector)`, 
+            js: `function leerCaracteres(numCaracteres) {\n    let vector = [];\n    for (let i = 0; i < numCaracteres; i++) {\n        let caracter;\n        do {\n            caracter = prompt(\`Ingrese caracter \${i+1}:\`);\n            if (caracter.length === 1) {\n                vector.push(caracter);\n                break;\n            } else {\n                console.log("Error: por favor ingrese solo un caracter.");\n            }\n        } while (true);\n    }\n    console.log("Vector de caracteres:", vector);\n}\n\nleerCaracteres(10);` },
+
+            { title: "43. Leer dos números e imprimir mayor y menor de ellos", 
+            py: `N1 = float(input("Ingrese número 1: "))\nN2 = float(input("Ingrese número 2: "))\n\nif N1 > N2:\n    print(f"Número mayor: {N1}")\n    print(f"Número menor: {N2}")\nelif N1 < N2:\n    print(f"Número mayor: {N2}")\n    print(f"Número menor: {N1}")\nelse:\n    print("Ambos números son iguales.")`, 
+            js: `let N1 = parseFloat(prompt("Ingrese número 1:"));\nlet N2 = parseFloat(prompt("Ingrese número 2:"));\n\nif (N1 > N2) {\n    console.log(\`Número mayor: \${N1}\`);\n    console.log(\`Número menor: \${N2}\`);\n} else if (N1 < N2) {\n    console.log(\`Número mayor: \${N2}\`);\n    console.log(\`Número menor: \${N1}\`);\n} else {\n    console.log("Ambos números son iguales.");\n}` },
+            
+            { title: "44.Leer tres números e imprimir mayor y menor de ellos", py: `N1=float(input("Ingrese número 1:"))\nN2=float(input("Ingrese número 2:"))\nN3=float(input("Ingrese número 3:"))\nif(N1>N2)and(N1>N3)and(N2>N3):print(f"{N1}es mayor y {N3}es menor")\nelif(N1>N2)and(N1>N3)and(N3>N2):print(f"{N1}es mayor y {N2}es menor")\nelif(N2>N1)and(N2>N3)and(N1>N3):print(f"{N2}es mayor y {N3}es menor")\nelif(N2>N1)and(N2>N3)and(N3>N1):print(f"{N2}es mayor y {N1}es menor")\nelif(N3>N1)and(N3>N2)and(N2>N1):print(f"{N3}es mayor y {N1}es menor")\nelif(N3>N1)and(N3>N2)and(N1>N2):print(f"{N3}es mayor y {N2}es menor")`, 
+            js: `function leerTresNumeros(){\nlet N1=parseFloat(prompt("Ingrese número 1:"));\nlet N2=parseFloat(prompt("Ingrese número 2:"));\nlet N3=parseFloat(prompt("Ingrese número 3:"));\nif(N1>N2&&N1>N3&&N2>N3){console.log(\`\${N1}es mayor y \${N3}es menor\`);}\nelif(N1>N2&&N1>N3&&N3>N2){console.log(\`\${N1}es mayor y \${N2}es menor\`);}\nelif(N2>N1&&N2>N3&&N1>N3){console.log(\`\${N2}es mayor y \${N3}es menor\`);}\nelif(N2>N1&&N2>N3&&N3>N1){console.log(\`\${N2}es mayor y \${N1}es menor\`);}\nelif(N3>N1&&N3>N2&&N2>N1){console.log(\`\${N3}es mayor y \${N1}es menor\`);}\nelif(N3>N1&&N3>N2&&N1>N2){console.log(\`\${N3}es mayor y \${N2}es menor\`);}}\nleerTresNumeros();`},
+           
+            { title: "45.Fibonacci", py: `A=0\nB=1\nfor _ in range(10):\n    C=A+B\n    print(C)\n    A=B\n    B=C`, 
+            js: `function fibonacci(){\n    let A=0;\n    let B=1;\n    console.log(A);\n    console.log(B);\n    for(let i=2;i<10;i++){\n        let C=A+B;\n        console.log(C);\n        A=B;\n        B=C;\n    }\n}\nfibonacci();`},
+
+            { title: "45-1.Ingrese calificación", py: `calif=float(input("Ingrese la calificación:"))\nif(calif>=0)and(calif<=5.9):print("Reprobado")\nelif(calif>=6)and(calif<=6.9):print("Aprobado bajo")\nelif(calif>=7)and(calif<=8.9):print("Aprobado medio")\nelif(calif>=9)and(calif<=10):print("Aprobado excelente")\nelse:print("Calificación fuera de rango")`, 
+            js: `function ingresarCalificacion(){\n    let calif=parseFloat(prompt("Ingrese la calificación:"));\n    if(calif>=0&&calif<=5.9){console.log("Reprobado");}\n    else if(calif>=6&&calif<=6.9){console.log("Aprobado bajo");}\n    else if(calif>=7&&calif<=8.9){console.log("Aprobado medio");}\n    else if(calif>=9&&calif<=10){console.log("Aprobado excelente");}\n    else{console.log("Calificación fuera de rango");}\n}\ningresarCalificacion();`},
+            
+            { title: "46.Suma de lista de productos", py: `total=0\nwhile True:\n    compra=float(input("Ingrese el total de la compra (0.0 para terminar):"))\n    if compra==0.0:\n        break\n    total+=compra\nprint(f"Total a pagar:{$total:.2f}")`, 
+            js: `function sumarListaProductos(){\n    let total=0;\n    while(true){\n        let compra=prompt("Ingrese el total de la compra (0.0 para terminar):");\n        if(compra===null||compra.trim()===""){break;}\n        compra=parseFloat(compra);\n        if(isNaN(compra)||compra<0){\n            console.log("Ingrese un valor válido.");\n            continue;\n        }\n        if(compra===0){break;}\n        total+=compra;\n    }\n    console.log(\`Total a pagar: $\${total.toFixed(2)}\`);\n}\nsumarListaProductos();`},
+       
+            { title: "47.Suma acumulada en bucle", py: `S=0\nC=100\ncontador=0\nfor _ in range(35):\n    S=S+C\n    C=S\n    contador+=S\nprint(f"Total S:{contador}")`, 
+            js: `function sumaAcumulada(){\n    let S=0;\n    let C=100;\n    let contador=0;\n    for(let i=0;i<35;i++){\n        let temp=S+C;\n        S=C;\n        C=temp;\n        contador+=S;\n    }\n    console.log(\`Total S:\${contador}\`);\n}\nsumaAcumulada();`},
+  
+            { title: "48.Fibonacci con iteraciones",  py: `print("Programa Fibonacci los primeros 10 valores")\na=0\nb=1\nfor i in range(1,11):\n    c=a+b\n    print("Valor Fibonacci:",a,"+",b,"=",c,"/ Iteración",i)\n    a=b\n    b=c\nprint("Fin del programa Fibonacci")`, 
+            js: `function fibonacciIteraciones(){\n    console.log("Programa Fibonacci los primeros 10 valores");\n    let a=0;\n    let b=1;\n    for(let i=1;i<=10;i++){\n        let c=a+b;\n        console.log(\`Valor Fibonacci: \${a} + \${b} = \${c} / Iteración \${i}\`);\n        a=b;\n        b=c;\n    }\n    console.log("Fin del programa Fibonacci");\n}\nfibonacciIteraciones();`},
+
+            { title: "48.1.Fibonacci desde 100 (35 términos)",  py: `A=100\nB=101\nfibonacci=[A,B]\nfor _ in range(33):\n    C=A+B\n    fibonacci.append(C)\n    A=B\n    B=C\nsuma_total=sum(fibonacci)\nprint("Secuencia de Fibonacci desde 100 (35 términos):")\nprint(fibonacci)\nprint(f"\\nSuma total de los 35 términos:{suma_total}")`, 
+            js: `function fibonacciDesde100(){\n    let A=100;\n    let B=101;\n    let fibonacci=[A,B];\n    for(let i=0;i<33;i++){\n        let C=A+B;\n        fibonacci.push(C);\n        A=B;\n        B=C;\n    }\n    let sumaTotal=fibonacci.reduce((acc,num)=>acc+num,0);\n    console.log("Secuencia de Fibonacci desde 100 (35 términos):");\n    console.log(fibonacci);\n    console.log(\`\\nSuma total de los 35 términos:\${sumaTotal}\`);\n}\nfibonacciDesde100();`},
+    
+            { title: "49.Hola Mundo", py: `print("Hola mundo")\nfor i in range(1,11):\n    print(i)`, 
+            js: `function holaMundoIteracion(){\n    console.log("Hola mundo");\n    for(let i=1;i<=10;i++){\n        console.log(i);\n    }\n}\nholaMundoIteracion();`},
+    
+            { title: "50.Contador con while", py: `c=1\nwhile(c<=10):\n    print(c)\n    c=c+1`, 
+            js: `function contadorWhile(){\n    let c=1;\n    while(c<=10){\n        console.log(c);\n        c++;\n    }\n}\ncontadorWhile();`},
+    
+            { title: "51.Clasificación de una calificación", py: `cal=0\ncal=float(input("Ingresa una calificación:"))\nif(cal>=0)and(cal<=5):print("reprobado")\nif(cal>5)and(cal<6):print("mal")\nif(cal>=6)and(cal<7):print("bajo")\nif(cal>=7)and(cal<8):print("medio")\nif(cal>=8)and(cal<9):print("alto")\nif(cal>=9)and(cal<=10):print("muy alto")\nif(cal>10)or(cal<0):print("fuera de rango")`, 
+            js: `function clasificacionCalificacion(){\n    let cal=parseFloat(prompt("Ingresa una calificación:"));\n    if(cal>=0&&cal<=5){console.log("reprobado");}\n    if(cal>5&&cal<6){console.log("mal");}\n    if(cal>=6&&cal<7){console.log("bajo");}\n    if(cal>=7&&cal<8){console.log("medio");}\n    if(cal>=8&&cal<9){console.log("alto");}\n    if(cal>=9&&cal<=10){console.log("muy alto");}\n    if(cal>10||cal<0){console.log("fuera de rango");}\n}\nclasificacionCalificacion();`},
+    
+            { title: "52.Fibonacci básico", py: `a=0\nb=1\nc=0\nfor i in range(1,11):\n    c=a+b\n    a=b\n    b=c\n    print(c)`, 
+            js: `function fibonacciBasico(){\n    let a=0;\n    let b=1;\n    let c=0;\n    for(let i=1;i<=10;i++){\n        c=a+b;\n        a=b;\n        b=c;\n        console.log(c);\n    }\n}\nfibonacciBasico();`},
+ 
+            { title: "53.Cálculo de impuestos y suma de productos",  py: `print("Try programiz.pro")\np=float(input())\ns=0\nwhile(p!=0):\n    s+=p\n    iva=p*(16/100)\n    print("precio del producto:",p,"su impuesto:",iva)\n    p=float(input())\nprint("Suma total de productos:",s)`, 
+            js: `function calcularImpuestos(){\n    console.log("Try programiz.pro");\n    let p=parseFloat(prompt("Ingrese el precio del producto (0 para terminar):"));\n    let s=0;\n    while(p!==0){\n        s+=p;\n        let iva=p*0.16;\n        console.log(\`precio del producto: \${p} su impuesto: \${iva}\`);\n        p=parseFloat(prompt("Ingrese el precio del producto (0 para terminar):"));\n    }\n    console.log(\`Suma total de productos: \${s}\`);\n}\ncalcularImpuestos();`},
+    
+            { title: "54.Cálculo de impuestos y suma de productos con IVA", py: `s=0\np=float(input("Introduce el precio del producto (0 para terminar):"))\nwhile p!=0:\n    s+=p\n    IVA=p*(16/100)\n    print(f"Precio del producto:{p}, su impuesto:{IVA}")\n    p=float(input("Introduce el precio del producto (0 para terminar):"))\nprint(f"Suma total de los productos:{s}")`, 
+            js: `function calcularImpuestosV2(){\n    let s=0;\n    let p=parseFloat(prompt("Introduce el precio del producto (0 para terminar):"));\n    while(p!==0){\n        s+=p;\n        let IVA=p*0.16;\n        console.log(\`Precio del producto: \${p}, su impuesto: \${IVA}\`);\n        p=parseFloat(prompt("Introduce el precio del producto (0 para terminar):"));\n    }\n    console.log(\`Suma total de los productos: \${s}\`);\n}\ncalcularImpuestosV2();`},
+    
+            { title: "55.Suma total de ventas", 
+            py: `totalven=0\nprint("Ingrese las ventas. Escriba 'fin' para terminar")\nwhile(entrada:=input("Venta:"))!="fin":\n    if entrada.replace(".","",1).isdigit():\n        totalven+=float(entrada)\n    else:\n        print("Número inválido")\nprint(f"Total:{totalven}")`, 
+            js: `function sumaTotalVentas(){\n    let totalven=0;\n    console.log("Ingrese las ventas. Escriba 'fin' para terminar");\n    let entrada=prompt("Venta:");\n    while(entrada!=="fin"){\n        if(!isNaN(entrada)&&entrada.trim()!==""){\n            totalven+=parseFloat(entrada);\n        }else{\n            console.log("Número inválido");\n        }\n        entrada=prompt("Venta:");\n    }\n    console.log(\`Total: \${totalven}\`);\n}\nsumaTotalVentas();`},
+
+            { title: "56.Captura de valores en un vector", py: `vector=[]\ncontador=0\nwhile(contador<9):\n    valor=input(f"ingresa el valor {contador+1}:")\n    vector.append(valor)\n    contador+=1`, 
+            js: `function capturaVector(){\n    let vector=[];\n    let contador=0;\n    while(contador<9){\n        let valor=prompt(\`Ingresa el valor \${contador+1}:\`);\n        vector.push(valor);\n        contador++;\n    }\n    console.log("Valores capturados:",vector);\n}\ncapturaVector();`}, 
+
+            { title: "57.Tabla del 5", py: `tabla_5=[]\nfor i in range(1,11):\n    resultado=5*i\n    tabla_5.append(resultado)\n    print(f"{5} * {i} = {resultado}")`, 
+            js: `function tablaDelCinco(){\n    let tabla_5=[];\n    for(let i=1;i<=10;i++){\n        let resultado=5*i;\n        tabla_5.push(resultado);\n        console.log(\`5 * \${i} = \${resultado}\`);\n    }\n}\ntablaDelCinco();`}, 
+
+            { title: "58.Suma de dos vectores", py: `V1=[int(input(f"Ingrese el número {i+1} para el primer vector:"))for i in range(10)]\nV2=[int(input(f"Ingrese el número {i+1} para el segundo vector:"))for i in range(10)]\nfor i in range(10):\n    suma=V1[i]+V2[i]\n    print(f"{V1[i]} + {V2[i]} = {suma}")`, 
+            js: `function sumaVectores(){\n    let V1=[];\n    let V2=[];\n    for(let i=0;i<10;i++){\n        V1.push(parseInt(prompt(\`Ingrese el número \${i+1} para el primer vector:\`)));\n    }\n    for(let i=0;i<10;i++){\n        V2.push(parseInt(prompt(\`Ingrese el número \${i+1} para el segundo vector:\`)));\n    }\n    for(let i=0;i<10;i++){\n        let suma=V1[i]+V2[i];\n        console.log(\`\${V1[i]} + \${V2[i]} = \${suma}\`);\n    }\n}\nsumaVectores();`},
+
+            { title: "59.Suma en dos vectores ", py: `V1=[int(input(f"Ingrese el número {i+1} para el primer vector:"))for i in range(10)]\nV2=[int(input(f"Ingrese el número {i+1} para el segundo vector:"))for i in range(10)]\nfor i in range(10):\n    suma=V1[i]+V2[i]\n    print(f"{V1[i]} + {V2[i]} = {suma}")`, 
+            js: `function sumaVectoresV2(){\n    let V1=[];\n    let V2=[];\n    for(let i=0;i<10;i++){\n        V1.push(parseInt(prompt(\`Ingrese el número \${i+1} para el primer vector:\`)));\n    }\n    for(let i=0;i<10;i++){\n        V2.push(parseInt(prompt(\`Ingrese el número \${i+1} para el segundo vector:\`)));\n    }\n    for(let i=0;i<10;i++){\n        let suma=V1[i]+V2[i];\n        console.log(\`\${V1[i]} + \${V2[i]} = \${suma}\`);\n    }\n}\nsumaVectoresV2();`},
+
+            { title: "60.Conversión de Celsius a Fahrenheit", py: `def gradocentigrados_a_fahrenheit(grados_celsius):\n    return (grados_celsius * 9/5) + 32\n\ngrados_celsius=float(input("Introduce los grados Celsius:"))\ngrados_fahrenheit=gradocentigrados_a_fahrenheit(grados_celsius)\nprint(f"{grados_celsius}°C equivalen a {grados_fahrenheit}°F")`, 
+            js: `function celsiusAFahrenheit(gradosCelsius){\n    return (gradosCelsius * 9/5) + 32;\n}\nlet gradosCelsius=parseFloat(prompt("Introduce los grados Celsius:"));\nlet gradosFahrenheit=celsiusAFahrenheit(gradosCelsius);\nconsole.log(\`\${gradosCelsius}°C equivalen a \${gradosFahrenheit}°F\`);`}
+    
+    ];
+
+
+        document.getElementById("codeTable").innerHTML += codes.map((code, index) => `
+            <tr>
+                <td><a href="#" onclick="toggleCode(${index})">${code.title}</a></td>
+                <td><pre id="pyCode${index}">${code.py}</pre></td>
+                <td><pre id="jsCode${index}">${code.js}</pre></td>
+            </tr>
+        `).join('');
+
+        function toggleCode(index) {
+            document.getElementById(`pyCode${index}`).style.display = document.getElementById(`pyCode${index}`).style.display === "none" ? "block" : "none";
+            document.getElementById(`jsCode${index}`).style.display = document.getElementById(`jsCode${index}`).style.display === "none" ? "block" : "none";
+        }
+    </script>
+ </tbody>
+</table>
+</body>
+</html>
